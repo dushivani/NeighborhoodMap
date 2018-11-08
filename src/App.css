@@ -1,0 +1,203 @@
+header {
+    text-align: center;
+    color: white;
+    background-color: black;
+    height: 80px;
+}
+
+#page-header {
+    margin: auto;
+    margin-left: 15px;
+    text-align: left;
+    letter-spacing: 2pt;
+    padding-top: 25px;
+}
+
+#menu {
+    display: none;
+}
+
+#filter {
+    height: 25pt;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#filter-text {
+    width: calc(72% - 10px);
+    padding: 5px;
+}
+
+#filter-help {
+    font-size: 10pt;
+    padding: 7px 9px;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: midnightblue;
+    cursor: pointer;
+}
+
+/*
+#filter-text:focus,#filter-text:hover {
+  outline: 0;
+  color: white;
+  background-color: #454545;
+    
+}
+*/
+
+#placelistview {
+    margin: 0px;
+    width: 242px;
+    background-color: black;
+}
+
+ul#places-list {
+    overflow: scroll;
+    margin: 0px;
+    height: 100vh;
+    padding-left: 0px;
+}
+
+ul#places-list li {
+    list-style: none;
+    padding: 0.5em;
+    margin: 0.2em;
+    font-size: 10pt;
+    line-height: 2;
+    text-align: left;
+    color: #cccccc;
+    background-color: black;
+}
+
+ul#places-list li:focus,
+#places-list li:hover {
+    outline: 0;
+    color: white;
+    background-color: #454545;
+    cursor: pointer;
+
+}
+
+#map {
+    bottom: 0px;
+    top: 80px;
+    height: 100%;
+    left: 244px;
+    position: absolute;
+    right: 0px;
+}
+
+#map-help {
+    text-align: center;
+    font-size: 8pt;
+}
+
+#map-error {
+    text-align: center;
+    margin-top: 30vh;
+}
+
+#map-error em,
+#map-error a {
+    color: red;
+    font-size: 8pt;
+}
+
+.infowindow {
+    max-width: 40vw;
+    max-height: 40vh;
+    color: black;
+}
+
+.infowindow h2 {
+    margin: 0;
+}
+
+.infowindow p {
+    color: black;
+    margin: 10px;
+}
+
+.infowindow ul {
+    margin: 10px;
+    padding-left: 10px;
+}
+
+.infowindow-item {
+    padding-bottom: 0.2em;
+}
+
+.infowindow-item a {
+    font-size: 10pt;
+    text-decoration: underline;
+    color: #0045bb;
+}
+
+/* The Close Button */
+
+.close {
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    outline: 0;
+    color: black;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 550px) {
+    .listview {
+        z-index: 10;
+        width: 242px;
+        position: absolute;
+        background-color: black;
+        visibility: hidden;
+        /* This trasform moves the drawer off canvas. */
+        -webkit-transform: translate(-250px, 0);
+        transform: translate(-250px, 0);
+        /* Optionally, we animate the drawer. */
+        -webkit-transition: -webkit-transform 0.3s ease;
+        transition: -webkit-transform 0.3s ease;
+        transition: transform 0.3s ease;
+        transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+    }
+    .listview.open {
+        visibility: visible;
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+        -webkit-box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5);
+    }
+    #map {
+        top: 110px;
+        bottom: 0px;
+        left: 0px;
+        height: 100%;
+        position: absolute;
+        right: 0px;
+        margin: 8px;
+    }
+    #menu {
+        display: block;
+        position: absolute;
+        cursor: pointer;
+        top: 20px;
+        right: 8px;
+        width: 32px;
+    }
+
+    #menu:focus,
+    #menu:hover {
+        outline: 0;
+        color: white;
+        background-color: #454545;
+    }
+    #page-header {
+        font-size: 16pt;
+    }
+}
