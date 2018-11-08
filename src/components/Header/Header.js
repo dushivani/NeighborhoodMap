@@ -5,7 +5,7 @@ import Toggle from './Toggle';
 const Header = ({ showPlaceList }) => (
   <header>
     <h1 id="page-header">
-      Infocity Delhi
+      Bhubaneswar
     </h1>
     {/* Toggle Component - Hamburger menu icon */}
     <Toggle showPlaceList={showPlaceList} />
