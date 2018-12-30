@@ -117,7 +117,7 @@ class GoogleMap extends Component {
     if (typeof window.google === 'object' && typeof window.google.maps === 'object') {
       this.initMap();
     } else {
-      this.loadGoogleMapAPIJS('https://maps.googleapis.com/maps/api/js?key=AIzaSyCi-zAfc-7OX9VPLSs5pGRq1Gt8JBJ8WJM&callback=initMap');
+      this.loadGoogleMapAPIJS('https://maps.googleapis.com/maps/api/js?key=AIzaSyBtwZNejy97CGGBDGvykoFzCyCcngj54HY&callback=initMap');
     }
   }
 
